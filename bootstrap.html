@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>bootstrap index</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./bootstrap_link/bootstrap.min.css" />
     <style type="text/css">
         *{
             margin: 0;
@@ -189,22 +189,22 @@
             <hr class="w-25 mx-auto pb-5" />
             <div class="row">
                 <div class="col-lg-4 col-md-2 col-12 mb-3">
-                    <img src="img/nature.jpg" class="img-fluid"/>
+                    <img src="img/nature.jpg" class="img-fluid gallery-img" onclick="imgPopup(this)" data-toggle="modal" data-target="#imgModal" />
                 </div> 
                 <div class="col-lg-4 col-md-2 col-12 mb-3">
-                    <img src="img/Planet-Earth.jpg" class="img-fluid" />
+                    <img src="img/Planet-Earth.jpg" onclick="imgPopup(this)" class="img-fluid gallery-img" data-toggle="modal" data-target="#imgModal"/>
                 </div>
                 <div class="col-lg-4 col-md-2 col-12 mb-3">
-                    <img src="img/nature.jpg" class="img-fluid" />
+                    <img src="img/nature.jpg" onclick="imgPopup(this)" class="img-fluid gallery-img" data-toggle="modal" data-target="#imgModal"/>
                 </div>
                 <div class="col-lg-4 col-md-2 col-12 mb-3">
-                    <img src="img/Planet-Earth.jpg" class="img-fluid" />
+                    <img src="img/Planet-Earth.jpg" onclick="imgPopup(this)" class="img-fluid gallery-img" data-toggle="modal" data-target="#imgModal" />
                 </div>
                 <div class="col-lg-4 col-md-2 col-12 mb-3">
-                    <img src="img/nature.jpg" class="img-fluid" />
+                    <img src="img/nature.jpg" onclick="imgPopup(this)" class="img-fluid gallery-img" data-toggle="modal" data-target="#imgModal" />
                 </div>
                 <div class="col-lg-4 col-md-2 col-12 mb-3">
-                    <img src="img/Planet-Earth.jpg" class="img-fluid" />
+                    <img src="img/Planet-Earth.jpg"onclick="imgPopup(this)" class="img-fluid gallery-img" data-toggle="modal" data-target="#imgModal" />
                 </div>  
             </div>
         </div>
@@ -260,6 +260,16 @@
     <footer>
         <p class="text-center text-white bg-dark">web pages@</p>
     </footer>
+    <!-- img popup start -->
+    <div class="modal fade" id="imgModal">
+        <div class="modal-dialog modal-lg">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-content">
+                <img src="" id="img-popup-src" class="img-fluid" alt="Responsive image" />
+            </div>
+        </div>
+    </div>
+    <!-- img popup end -->
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -269,6 +279,13 @@
     
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        function imgPopup(el){
+            var imgSrc = el.src;
+        document.getElementById("img-popup-src").src = imgSrc;
+        }
+    </script>
+
     </body>
   </head>
 </html>

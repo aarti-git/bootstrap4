@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pagination</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap_link/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container font-weight-bold">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a
+              class="page-link"
+              href=""
+              onclick="pageChang(this,false)"
+              aria-label="Previous"
+            >
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="bootstrap.html" id="list-href">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="B1paractis.html" id="list-href">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="bootstrap-test-ex.html" id="list-href"
+              >3</a
+            >
+          </li>
+          <!-- <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">6</a></li> -->
+          <li class="page-item">
+            <a
+              class="page-link"
+              href=""
+              onclick="pageChang(this,true)"
+              aria-label="Next"
+            >
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- <script>
+      var n = 0;
+      var liArrya = [
+        "bootstrap.html",
+        "B1paractis.html",
+        "bootstrap-test-ex.html",
+      ];
+      var listHref = document.getElementById("list-href");
+      function pageChang(el, x) {
+        if (x) {
+          n++;
+          console.log(n);
+        } else if (!x) {
+          n--;
+          console.log(n);
+        }
+        listHref.href = liArrya[n];
+      }
+    </script> -->
+  </body>
+</html>
